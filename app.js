@@ -1,9 +1,17 @@
+document.addEventListener('DOMContentLoaded', function () {
+    // ...
+    // Place code here.
+    // ...
+
+
+
+
 const collection = [
     {
       Model: "M4 F82",
       Engine: "6 inline turbo twin",
       ReleaseYear: 2014,
-      Picture: "link/to/a/picture",
+      Picture: "",
       Chassis: ["Coupe", "Cabriolet"],
     },
     {
@@ -74,3 +82,41 @@ const collection = [
 ;
 
 // console.log(collection)
+
+
+
+for (let index = 0; index < collection.length; index++) {
+    const element = collection[index];
+    function myFunction() {
+        var x = document.createElement("ARTICLE");
+        x.setAttribute("id", "myArticle");
+        document.body.appendChild(x);
+
+        var img = document.createElement('img');
+        img.src = element.Picture;
+        document.getElementById('myArticle').appendChild(img);
+      
+        var heading = document.createElement("H1");
+        var txt1 = document.createTextNode(element.Model);
+        heading.appendChild(txt1);
+        document.getElementById("myArticle").appendChild(heading);
+      
+        var para = document.createElement("P");
+        var txt2 = document.createTextNode(element.Engine);
+        para.appendChild(txt2);
+        document.getElementById("myArticle").appendChild(para);
+        
+        var para = document.createElement("P");
+        var txt2 = document.createTextNode(element.ReleaseYear);
+        para.appendChild(txt2);
+        document.getElementById("myArticle").appendChild(para);
+        
+        var para = document.createElement("P");
+        var txt2 = document.createTextNode(element.Chassis);
+        para.appendChild(txt2);
+        document.getElementById("myArticle").appendChild(para);
+      }
+      myFunction()
+
+}
+});
