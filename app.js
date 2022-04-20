@@ -71,3 +71,6 @@ const collection = [
     },
 
   ];
+;
+
+// console.log(collection)
