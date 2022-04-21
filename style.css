@@ -74,7 +74,27 @@ header a:hover {
     width: 700px;
     margin-top: 30px;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
+}
+
+.collection {
+    column-count: 2;
+    margin: 80px;
+}
+
+article {
+    align-items: center;
+    width: 540px;
+    border: 2px rgb(185, 185, 185) solid;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 1%;
+    
+}
+
+article img{
+    height: 290px;
 }
 
 
