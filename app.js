@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // ...
     // Place code here.
     // ...
-
+   
 
 
 
@@ -88,34 +88,32 @@ const collection = [
 for (let index = 0; index < collection.length; index++) {
     const element = collection[index];
     function myFunction() {
-        var x = document.createElement("ARTICLE");
-        x.setAttribute("id", `article-${index}`);
+        let x = document.createElement("ARTICLE");
         document.querySelector('.collection').appendChild(x);
 
-        var img = document.createElement('img');
+        let img = document.createElement('img');
         img.src = element.Picture;
         x.appendChild(img);
-        document.getElementById(`article-${index}`).appendChild(img);
       
-        var heading = document.createElement("H1");
-        var txt1 = document.createTextNode(element.Model);
+        let heading = document.createElement("H1");
+        let txt1 = document.createTextNode(element.Model);
         heading.appendChild(txt1);
-        document.getElementById(`article-${index}`).appendChild(heading);
+        x.appendChild(heading);
       
         var para = document.createElement("P");
         var txt2 = document.createTextNode(element.Engine);
         para.appendChild(txt2);
-        document.getElementById(`article-${index}`).appendChild(para);
+        x.appendChild(para);
         
         var para = document.createElement("P");
         var txt2 = document.createTextNode(element.ReleaseYear);
         para.appendChild(txt2);
-        document.getElementById(`article-${index}`).appendChild(para);
+        x.appendChild(para);
         
         var para = document.createElement("P");
         var txt2 = document.createTextNode(element.Chassis);
         para.appendChild(txt2);
-        document.getElementById(`article-${index}`).appendChild(para);
+        x.appendChild(para);
       }
       myFunction()
 

@@ -14,7 +14,6 @@ header {
 header ul {
     display: flex;
     align-items: center;
-    margin-right: -100px;
 }
 
 header li {
@@ -50,6 +49,7 @@ header a:hover {
 .banner {
     background: url('./img/banneer.jpg');
     background-position: 0px -350px;
+    background-repeat: no-repeat;
     background-size: cover;
     height: 250px;
 }
@@ -83,18 +83,79 @@ header a:hover {
 }
 
 article {
+    display: flex;
     align-items: center;
-    width: 540px;
+    flex-direction: column;
+    max-width: 540px;
     border: 2px rgb(185, 185, 185) solid;
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: 20px;
+    padding: 10px 0px; 
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 1%;
-    
+    transition: all .3s ease-in-out;
+}
+
+article:hover {
+    box-shadow: rgba(94, 98, 102, 0.2) 0px 16px 24px;
+    transform: scale(1.05);
 }
 
 article img{
-    height: 290px;
+    max-height: 290px;
+    max-width: 97%;
 }
 
+@media screen and (max-width: 768px) {
 
+
+    header ul {
+        display: flex;
+        align-items: center;
+        margin-right: 10px;
+    }
+
+    header li {
+        margin: 0.5rem;
+        list-style: none;
+        font-size: 1.2rem;
+    }
+
+    .logo img {
+        margin-left: -20px;
+    }
+
+    .banner {
+        background: url('./img/banneer.jpg');
+        background-position: 0px -350px;
+        background-size: cover;
+        height: 250px;
+    }
+
+    .concept p {
+        width: 70%;
+    }
+
+    .collection {
+        column-count: 1;
+        margin: auto;
+    }
+
+    article {
+        margin: auto;
+        width: 97%;
+        margin-bottom: 10px;
+    }
+
+    article img {
+        width: 100%;
+    }
+
+    .banner {
+        background-position: 0px -550px;
+        background-size: cover;
+        height: 150px;
+    }
+
+
+
+}
